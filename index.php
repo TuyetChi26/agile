@@ -12,22 +12,24 @@ require_once './commons/function.php'; // Hàm hỗ trợ
 
 // Require toàn bộ file Controllers
 require_once './controllers/homeController.php';
+require_once './controllers/userController.php';
 
 // Require toàn bộ file Models
 require_once './models/homeModel.php';
-
+require_once './models/userModel.php';
 
 
 // Route
 $act = $_GET['act'] ?? '/';
 
-// mọi yêu cầu POST có thể được xử lý ngay lập tức khi handleRequest() được gọi.
-$controller->handleRequest();
+
 match ($act) {
 
     
     '/' => (new homeController()) -> home(),
-
-    
+    'register' => (new userController()) -> register(),
+    // 'comfirm_registers' => (new userController()) -> comfirm_registers(),
+    'login' => (new userController()) -> login(),
+    'logout' => (new userController())->logout(),
 
 };
