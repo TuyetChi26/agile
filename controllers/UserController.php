@@ -20,7 +20,7 @@
                     // Đăng nhập thành công
                     session_start();
                     $_SESSION['user'] = $user;
-                    header('Location: ' . BASE_URL . '?act=/');
+                    header('Location: ' . BASE_URL);
                     exit;
                 } else {
                     // Đăng nhập thất bại
@@ -38,7 +38,7 @@
             session_destroy();
             
             // Redirect về trang home
-            header('Location: ' . BASE_URL . '?act=/');
+            header('Location: ' . BASE_URL);
             exit;
         }
 
