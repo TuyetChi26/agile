@@ -7,7 +7,23 @@ class UserModel
     {
         $this->conn = connectDB();
     }
+    public function getByIdUser($id)
+    {
+        try {
+            $sql = 'SELECT * FROM users
+                    WHERE users.id = :id';
 
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->execute([
+                ':id' => $id
+            ]);
+
+            return $stmt->fetch();
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
     public function login($email, $password)
     {
         try {
@@ -47,6 +63,8 @@ class UserModel
             // Kiểm tra mật khẩu
             if ($password !== $repassword) {
                 return ['success' => false, 'message' => 'Mật khẩu không khớp'];
+            } else if (strlen($password) < 8) {
+                return ['success' => false, 'message' => 'Mật khẩu phải có ít nhất 8 ký tự'];
             }
             
             // Hash mật khẩu
