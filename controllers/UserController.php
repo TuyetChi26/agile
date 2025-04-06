@@ -78,6 +78,7 @@ class userController
                 // Đăng nhập thành công
                 session_start();
                 $_SESSION['user'] = $user;
+                // var_dump($_SESSION['user']);die;
                 header('Location: ' . BASE_URL);
                 exit;
             } else {
@@ -100,5 +101,10 @@ class userController
         exit;
     }
 
-
+    public function profileShow()
+    {
+        $id_user = $_SESSION['user']['id'];
+        $user = $this->userModel->getByIdUser($id_user);
+        require_once './views/profile.php';
+    }
 }
