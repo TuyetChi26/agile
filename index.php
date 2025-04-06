@@ -31,5 +31,6 @@ match ($act) {
     'login' => (new userController()) -> login(),
     'logout' => (new userController())->logout(),
     'logout' => (new userController())->logout(),
+    'show-profile' => (new userController())->profileShow(),
 
 };
