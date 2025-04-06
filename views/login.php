@@ -23,10 +23,13 @@
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Mật khẩu</label>
-                        <input type="password" class="form-control" name="password" id="password" required>
+                        <input type="password" class="form-control" name="password" id="password">
                     </div>
                     <button type="submit" class="btn btn-primary w-100" name="login">Đăng nhập</button>
                 </form>
+                <p class="mt-3 text-center">
+                Chưa có tài khoản? <a href="<?= BASE_URL . '?act=register' ?>">Đăng ký</a>
+            </p>
             </div>
         </div>
     </div>

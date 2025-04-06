@@ -18,26 +18,29 @@
                 <form action="<?= BASE_URL . '?act=register' ?>" method="post">
                     <div class="mb-3">
                         <label for="fullname" class="form-label">Họ và tên</label>
-                        <input type="text" name="fullname" class="form-control" id="fullname" required>
+                        <input type="text" name="fullname" class="form-control" id="fullname" >
                     </div>
                     <div class="mb-3">
                         <label for="phone" class="form-label">Số điện thoại</label>
-                        <input type="text" name="phone" class="form-control" id="phone" required>
+                        <input type="text" name="phone" class="form-control" id="phone" >
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" class="form-control" id="email" required>
+                        <input type="email" name="email" class="form-control" id="email" required >
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Mật khẩu</label>
-                        <input type="password" name="password" class="form-control" id="password" required>
+                        <input type="password" name="password" class="form-control" id="password" >
                     </div>
                     <div class="mb-3">
                         <label for="repassword" class="form-label">Nhập lại mật khẩu</label>
-                        <input type="password" name="repassword" class="form-control" id="repassword" required>
+                        <input type="password" name="repassword" class="form-control" id="repassword" >
                     </div>
                     <button type="submit" class="btn btn-success w-100">Đăng ký</button>
                 </form>
+                <p class="mt-3 text-center">
+                Đã có tài khoản? <a href="<?= BASE_URL . '?act=login' ?>">Đăng nhập</a>
+            </p>
             </div>
         </div>
     </div>

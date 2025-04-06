@@ -28,8 +28,8 @@ match ($act) {
     
     '/' => (new homeController()) -> home(),
     'register' => (new userController()) -> register(),
-    // 'comfirm_registers' => (new userController()) -> comfirm_registers(),
     'login' => (new userController()) -> login(),
+    'logout' => (new userController())->logout(),
     'logout' => (new userController())->logout(),
 
 };
