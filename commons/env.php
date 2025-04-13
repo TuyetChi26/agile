@@ -5,6 +5,8 @@
 
 define('BASE_URL'       , 'http://localhost/agile/');
 
+define('BASE_URL_ADMIN'       , 'http://localhost/agile/admin/');
+
 define('DB_HOST'    , 'localhost');
 define('DB_PORT'    , 3306);
 define('DB_USERNAME', 'root');

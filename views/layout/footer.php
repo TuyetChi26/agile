@@ -19,19 +19,19 @@
                                 </div>
                             </div>
                             <div class="widget-body">
-                                <p>We are a team of designers and developers that create high quality wordpress, shopify, Opencart </p>
+                                <p>Hệ thống thời trang cho phái mạnh hàng đầu Việt Nam, hướng tới phong cách nam tính, lịch lãm và trẻ trung. </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="widget-item">
-                            <h6 class="widget-title">Contact Us</h6>
+                            <h6 class="widget-title">Thông tin liên hệ</h6>
                             <div class="widget-body">
                                 <address class="contact-block">
                                     <ul>
-                                        <li><i class="pe-7s-home"></i> 4710-4890 Breckinridge USA</li>
-                                        <li><i class="pe-7s-mail"></i> <a href="mailto:demo@plazathemes.com">demo@yourdomain.com </a></li>
-                                        <li><i class="pe-7s-call"></i> <a href="tel:(012)800456789987">(012) 800 456 789-987</a></li>
+                                        <li><i class="pe-7s-home"></i> Địa chỉ: phường Phương Canh, Trịnh Văn Bô, quận Nam Từ Liêm, Hà Nội</li>
+                                        <li><i class="pe-7s-mail"></i> <a href="mailto:demo@plazathemes.com">cskh@nioc.vn </a></li>
+                                        <li><i class="pe-7s-call"></i> <a href="tel:(012)800456789987">0964942121</a></li>
                                     </ul>
                                 </address>
                             </div>
@@ -39,22 +39,22 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="widget-item">
-                            <h6 class="widget-title">Information</h6>
+                            <h6 class="widget-title">Nhóm liên kết</h6>
                             <div class="widget-body">
                                 <ul class="info-list">
-                                    <li><a href="#">about us</a></li>
-                                    <li><a href="#">Delivery Information</a></li>
-                                    <li><a href="#">privet policy</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">contact us</a></li>
-                                    <li><a href="#">site map</a></li>
+                                    <li><a href="#">Tìm kiếm</a></li>
+                                    <li><a href="#">Giới thiệu</a></li>
+                                    <li><a href="#">Chính sách đổi trả</a></li>
+                                    <li><a href="#">Chính sách bảo mật</a></li>
+                                    <li><a href="#">Tuyển dụng</a></li>
+                                    <li><a href="#">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="widget-item">
-                            <h6 class="widget-title">Follow Us</h6>
+                            <h6 class="widget-title">Theo dõi chúng tôi</h6>
                             <div class="widget-body social-link">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
@@ -67,7 +67,7 @@
                 <div class="row align-items-center mt-20">
                     <div class="col-md-6">
                         <div class="newsletter-wrapper">
-                            <h6 class="widget-title-text">Signup for newsletter</h6>
+                            <h6 class="widget-title-text">Đăng ký nhận bản tin</h6>
                             <form class="newsletter-inner" id="mc-form">
                                 <input type="email" class="news-field" id="mc-email" autocomplete="off" placeholder="Enter your email address">
                                 <button class="news-btn" id="mc-submit">Subscribe</button>
@@ -94,7 +94,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="copyright-text text-center">
-                            <p>&copy; 2022 <b>Corano</b> Made with <i class="fa fa-heart text-danger"></i> by <a href="https://hasthemes.com/"><b>HasThemes</b></a></p>
+                            <p>&copy; 2025 <b>NiOc</b> Được làm bằng <i class="fa fa-heart text-danger"></i> bởi <a href="https://hasthemes.com/"><b>𝓜𝓸𝓸𝓷𝓼𝓱𝓪𝓭𝓸𝔀 𝓞𝔀𝓵</b></a></p>
                         </div>
                     </div>
                 </div>

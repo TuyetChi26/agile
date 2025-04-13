@@ -11,12 +11,11 @@ require_once './commons/env.php'; // Khai báo biến môi trường
 require_once './commons/function.php'; // Hàm hỗ trợ
 
 // Require toàn bộ file Controllers
-require_once './controllers/homeController.php';
+require_once './controllers/HomeController.php';
 require_once './controllers/UserController.php';
 require_once './controllers/ProductController.php';
 
 // Require toàn bộ file Models
-require_once './models/homeModel.php';
 require_once './models/UserModel.php';
 require_once './models/ProductModel.php';
 
@@ -27,7 +26,7 @@ $act = $_GET['act'] ?? '/';
 match ($act) {
 
     
-    '/'             => (new homeController())   -> home(),
+    '/'             => (new HomeController())   -> home(),
 
     'register'      => (new userController())   -> register(),
     'login'         => (new userController())   -> login(),
@@ -35,7 +34,7 @@ match ($act) {
     'logout'        => (new userController())   ->logout(),
     'show-profile'  => (new userController())   ->profileShow(),
 
-    'show'          => (new ProductController())->show(),
-    'shop'          => (new ProductController())->shop(),
+    'show'          => (new HomeController())->show(),
+    'shop'          => (new HomeController())->shop(),
     'cart'          => (new ProductController())->cart(),
 };

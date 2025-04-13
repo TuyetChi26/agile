@@ -11,10 +11,6 @@
         {
             require_once './views/shop.php';
         }
-        public function show() 
-        {
-            require_once './views/show.php';
-        }
 
         public function cart() 
         {
