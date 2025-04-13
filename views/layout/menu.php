@@ -12,7 +12,7 @@
                     <div class="col-lg-2">
                         <div class="logo">
                             <a href="<?= BASE_URL ?>">
-                                <img src="assets/img/logo/z6475862695475_9f0cb8d5df52f316faffc8a2459e5e6f-removebg-preview.png" alt="Brand Logo">
+                                <img src="assets/img/logo/z6475862695475_9f0cb8d5df52f316faffc8a2459e5e6f-removebg-preview.png">
                             </a>
                         </div>
                     </div>
@@ -29,16 +29,13 @@
 
                                         <li><a href="<?= BASE_URL . '?act=shop' ?>">Thời Trang<i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown">
-                                                <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
-                                                <li><a href="blog-list-left-sidebar.html">blog list left sidebar</a></li>
-                                                <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
-                                                <li><a href="blog-list-right-sidebar.html">blog list right sidebar</a></li>
-                                                <li><a href="blog-grid-full-width.html">blog grid full width</a></li>
-                                                <li><a href="blog-details.html">blog details</a></li>
-                                                <li><a href="blog-details-left-sidebar.html">blog details left sidebar</a></li>
-                                                <li><a href="blog-details-audio.html">blog details audio</a></li>
-                                                <li><a href="blog-details-video.html">blog details video</a></li>
-                                                <li><a href="blog-details-image.html">blog details image</a></li>
+
+                                            <?php foreach($listDanhMuc as $key => $DanhMuc) : ?>
+                                                
+                                                <li><a href="<?= BASE_URL . '?act=shop&categor=' . $DanhMuc['id'] ?>"><?= $DanhMuc['categoryName']?></a></li>
+
+                                            <?php endforeach; ?>
+
                                             </ul>
                                         </li>
 
