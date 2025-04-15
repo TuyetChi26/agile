@@ -12,11 +12,15 @@
             $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
             
             if (!empty($searchTerm)) {
-                $listSanPham = $this->modelSanPham->searchProducts($searchTerm);
-                require_once './views/shop.php';
+                // Chuyển hướng đến trang shop với tham số tìm kiếm
+                header('Location: ' . BASE_URL . '?act=shop&search=' . urlencode($searchTerm));
+                exit();
+                
             } else {
                 $listSanPham = $this->modelSanPham->getAllSanPham();
             }
+
+            $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
             
             require_once './views/home.php';
         }
@@ -35,10 +39,10 @@
             
             $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
             
-            require_once './views/layout/header.php';
-            require './views/layout/menu.php';
+            // require_once './views/layout/header.php';
+            // require './views/layout/menu.php';
             require './views/shop.php';
-            require_once './views/layout/footer.php';
+            // require_once './views/layout/footer.php';
         }
 
         public function show() {

@@ -32,7 +32,7 @@
 
                                             <?php foreach($listDanhMuc as $key => $DanhMuc) : ?>
                                                 
-                                                <li><a href="<?= BASE_URL . '?act=shop&categor=' . $DanhMuc['id'] ?>"><?= $DanhMuc['categoryName']?></a></li>
+                                                <li><a href="<?= BASE_URL . '?act=shop&category=' . $DanhMuc['id'] ?>"><?= $DanhMuc['categoryName']?></a></li>
 
                                             <?php endforeach; ?>
 
