@@ -31,7 +31,6 @@ match ($act) {
     'register'      => (new userController())   -> register(),
     'login'         => (new userController())   -> login(),
     'logout'        => (new userController())   ->logout(),
-    'logout'        => (new userController())   ->logout(),
     'show-profile'  => (new userController())   ->profileShow(),
 
     'show'          => (new HomeController())->show(),

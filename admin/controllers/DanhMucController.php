@@ -5,7 +5,7 @@ class AdminDanhMucController
     public $modelDanhMuc;
     public function __construct()
     {
-        $this->modelDanhMuc = new AdminDanhMuc();
+        $this->modelDanhMuc = new DanhMuc();
     }
 
     public function danhSachDanhMuc() {
