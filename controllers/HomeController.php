@@ -28,21 +28,21 @@
         public function shop() {
             $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
             $category = isset($_GET['category']) ? $_GET['category'] : '';
+            $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
             
-            if (!empty($searchTerm)) {
-                $listSanPham = $this->modelSanPham->searchProducts($searchTerm);
-            } elseif (!empty($category)) {
-                $listSanPham = $this->modelSanPham->getProductsByCategory($category);
-            } else {
-                $listSanPham = $this->modelSanPham->getAllSanPham();
-            }
+            $result = $this->modelSanPham->getProductsPaginated($page, 12, $searchTerm, $category);
+            $listSanPham = $result['products'];
+            $totalProducts = $result['total'];
+            $limit = $result['limit'];
+            $currentPage = $result['page'];
+            $totalPages = ceil($totalProducts / $limit);
             
             $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
             
-            // require_once './views/layout/header.php';
-            // require './views/layout/menu.php';
+            require_once './views/layout/header.php';
+            require './views/layout/menu.php';
             require './views/shop.php';
-            // require_once './views/layout/footer.php';
+            require_once './views/layout/footer.php';
         }
 
         public function show() {

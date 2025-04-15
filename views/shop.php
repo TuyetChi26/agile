@@ -272,15 +272,35 @@
                             <!-- product item list wrapper end -->
 
                             <!-- start pagination area -->
+                            <?php if ($totalPages > 1): ?>
                             <div class="paginatoin-area text-center">
                                 <ul class="pagination-box">
-                                    <li><a class="previous" href="#"><i class="pe-7s-angle-left"></i></a></li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a class="next" href="#"><i class="pe-7s-angle-right"></i></a></li>
+                                    <?php
+                                    $startPage = max(1, $currentPage - 2);
+                                    $endPage = min($totalPages, $currentPage + 2);
+
+                                    // Link previous page
+                                    if ($currentPage > 1) {
+                                        echo '<li><a href="' . BASE_URL . '?act=shop&page=' . ($currentPage - 1) . '&search=' . urlencode($searchTerm) . '&category=' . urlencode($category) . '"><i class="fa fa-angle-left"></i></a></li>';
+                                    }
+
+                                    // Display page numbers
+                                    for ($i = $startPage; $i <= $endPage; $i++) {
+                                        if ($i == $currentPage) {
+                                            echo '<li class="active"><a href="#">' . $i . '</a></li>';
+                                        } else {
+                                            echo '<li><a href="' . BASE_URL . '?act=shop&page=' . $i . '&search=' . urlencode($searchTerm) . '&category=' . urlencode($category) . '">' . $i . '</a></li>';
+                                        }
+                                    }
+
+                                    // Link next page
+                                    if ($currentPage < $totalPages) {
+                                        echo '<li><a href="' . BASE_URL . '?act=shop&page=' . ($currentPage + 1) . '&search=' . urlencode($searchTerm) . '&category=' . urlencode($category) . '"><i class="fa fa-angle-right"></i></a></li>';
+                                    }
+                                    ?>
                                 </ul>
                             </div>
+                            <?php endif; ?>
                             <!-- end pagination area -->
                         </div>
                     </div>
