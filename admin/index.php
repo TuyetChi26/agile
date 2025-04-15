@@ -18,15 +18,15 @@ $act = $_GET['act'] ?? '/';
 
 match ($act) {
     // Danh muc
-    'danh-muc' => (new DanhMucController())->index(),
+    'danh-muc' => (new AdminDanhMucController())->index(),
 
-    'form-them-danh-muc' => (new DanhMucController())->add(),
-    'them-danh-muc' => (new DanhMucController())->store(),
+    'form-them-danh-muc' => (new AdminDanhMucController())->add(),
+    'them-danh-muc' => (new AdminDanhMucController())->store(),
 
-    'form-sua-danh-muc' => (new DanhMucController())->edit(),
-    'sua-danh-muc' => (new DanhMucController())->update(),
+    'form-sua-danh-muc' => (new AdminDanhMucController())->edit(),
+    'sua-danh-muc' => (new AdminDanhMucController())->update(),
 
-    'xoa-danh-muc' => (new DanhMucController())->destroy(),
+    'xoa-danh-muc' => (new AdminDanhMucController())->destroy(),
 
     // San Pham
     'product' => (new SanPhamController())-> index(),
