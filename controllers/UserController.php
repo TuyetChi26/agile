@@ -2,9 +2,12 @@
 class userController
 {
     public $userModel;
+    public $modelSanPham;
 
     public function __construct()
     {
+        $this->modelSanPham = new ProductModel();
+
         $this->userModel = new userModel();
     }
     public function register()
@@ -103,6 +106,7 @@ class userController
 
     public function profileShow()
     {
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         $id_user = $_SESSION['user']['id'];
         $user = $this->userModel->getByIdUser($id_user);
         require_once './views/profile.php';

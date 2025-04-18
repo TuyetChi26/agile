@@ -18,6 +18,7 @@ require_once './controllers/ProductController.php';
 // Require toàn bộ file Models
 require_once './models/UserModel.php';
 require_once './models/ProductModel.php';
+require_once './models/CartModel.php';
 
 // Route
 $act = $_GET['act'] ?? '/';
@@ -35,5 +36,9 @@ match ($act) {
 
     'show'          => (new HomeController())->show(),
     'shop'          => (new HomeController())->shop(),
-    'cart'          => (new ProductController())->cart(),
+
+    'cart'          => (new HomeController())->cart(),
+    'add-cart'      => (new HomeController())->addCart(),
+    'update-cart'   => (new HomeController())->updateCart(),
+    'delete-cart-item' => (new HomeController())->deleteCartItem(),
 };

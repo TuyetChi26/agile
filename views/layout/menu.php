@@ -30,22 +30,16 @@
                                         <li><a href="<?= BASE_URL . '?act=shop' ?>">Thời Trang<i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown">
 
-                                            <?php foreach($listDanhMuc as $key => $DanhMuc) : ?>
-                                                
-                                                <li><a href="<?= BASE_URL . '?act=shop&category=' . $DanhMuc['id'] ?>"><?= $DanhMuc['categoryName']?></a></li>
+                                                <?php foreach ($listDanhMuc as $key => $DanhMuc) : ?>
 
-                                            <?php endforeach; ?>
+                                                    <li><a href="<?= BASE_URL . '?act=shop&category=' . $DanhMuc['id'] ?>"><?= $DanhMuc['categoryName'] ?></a></li>
+
+                                                <?php endforeach; ?>
 
                                             </ul>
                                         </li>
 
-                                        <li><a href="<?= BASE_URL . '?act=shop' ?>">Sale</a></li>
-
-                                        <li><a href="<?= BASE_URL . '?act=shop' ?>">Sản Phẩm Mới</a></li>
-
-                                        <li><a href="contact-us.html">Hệ Thống Cửa Hàng</a></li>
-
-                                        <li><a href="contact-us.html">Liên Hệ</a></li>
+                                        <li><a href="<?= BASE_URL . '?act=cart' ?>">Giỏ hàng </a></li>
 
                                     </ul>
                                 </nav>
@@ -68,7 +62,7 @@
                             <div class="header-configure-area">
                                 <ul class="nav justify-content-end">
                                     <li class="user-hover">
-                                        <a href="#">
+                                        <a href="">
                                             <i class="pe-7s-user"></i>
                                         </a>
                                         <ul class="dropdown-list">
@@ -82,18 +76,7 @@
                                             <?php endif; ?>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a href="wishlist.html">
-                                            <i class="pe-7s-like"></i>
-                                            <div class="notification">0</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="<?= BASE_URL . '?act=cart' ?>" class="minicart-btn">
-                                            <i class="pe-7s-shopbag"></i>
-                                            <div class="notification">2</div>
-                                        </a>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                         </div>
